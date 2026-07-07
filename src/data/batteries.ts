@@ -1,0 +1,592 @@
+export interface Battery {
+  batteryId: string;
+  qrCode: string;
+  vehicle: string;
+  manufacturer: string;
+  batteryType: string;
+  batteryCapacity: string;
+  owner: string;
+
+  manufactureDate: string;
+  installationDate: string;
+
+  batteryHealth: number;
+  healthScore: number;
+  aiGrade: string;
+
+  remainingLife: string;
+  estimatedRange: string;
+
+  chargeCycles: number;
+  fastCharging: string;
+  slowCharging: string;
+
+  temperature: string;
+  voltage: string;
+  current: string;
+
+  soh: string;
+  soc: string;
+
+  degradation: string;
+
+  lastService: string;
+  nextService: string;
+
+  warrantyStatus: string;
+  warrantyExpiry: string;
+
+  chargingEfficiency: string;
+  energyEfficiency: string;
+
+  lastScan: string;
+
+  batteryStatus: string;
+
+  recommendations: string[];
+}
+
+export const batteries: Battery[] = [
+
+{
+batteryId:"RV-TM3-2026-001245",
+qrCode:"QR-TM3-001245",
+vehicle:"Tesla Model 3",
+manufacturer:"Tesla",
+batteryType:"Lithium Iron Phosphate (LFP)",
+batteryCapacity:"75 kWh",
+owner:"John Anderson",
+manufactureDate:"15 Jan 2024",
+installationDate:"22 Jan 2024",
+batteryHealth:91,
+healthScore:98,
+aiGrade:"A+",
+remainingLife:"6.8 Years",
+estimatedRange:"486 km",
+chargeCycles:624,
+fastCharging:"18%",
+slowCharging:"82%",
+temperature:"32°C",
+voltage:"398 V",
+current:"148 A",
+soh:"91%",
+soc:"78%",
+degradation:"9%",
+lastService:"12 Jun 2026",
+nextService:"15 Dec 2026",
+warrantyStatus:"Active",
+warrantyExpiry:"15 Jan 2032",
+chargingEfficiency:"94%",
+energyEfficiency:"6.5 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Excellent",
+recommendations:[
+"Battery operating normally.",
+"Avoid frequent DC fast charging.",
+"Next diagnostic after 3 months."
+]
+},
+{
+  batteryId:"RV-TMY-2026-002145",
+  qrCode:"QR-TMY-002145",
+  vehicle:"Tesla Model Y",
+  manufacturer:"Tesla",
+  batteryType:"Lithium-ion",
+  batteryCapacity:"82 kWh",
+  owner:"Emily Carter",
+  manufactureDate:"10 Feb 2024",
+  installationDate:"18 Feb 2024",
+  batteryHealth:96,
+  healthScore:99,
+  aiGrade:"A+",
+  remainingLife:"8.2 Years",
+  estimatedRange:"560 km",
+  chargeCycles:355,
+  fastCharging:"12%",
+  slowCharging:"88%",
+  temperature:"29°C",
+  voltage:"405 V",
+  current:"152 A",
+  soh:"96%",
+  soc:"84%",
+  degradation:"4%",
+  lastService:"15 Jun 2026",
+  nextService:"15 Dec 2026",
+  warrantyStatus:"Active",
+  warrantyExpiry:"18 Feb 2032",
+  chargingEfficiency:"97%",
+  energyEfficiency:"7.5 km/kWh",
+  lastScan:"06 Jul 2026",
+  batteryStatus:"Excellent",
+  recommendations:[
+    "Battery health is excellent.",
+    "Maintain current charging habits.",
+    "Routine inspection after 6 months."
+  ]
+},
+{
+  batteryId:"RV-TMS-2026-003412",
+  qrCode:"QR-TMS-003412",
+  vehicle:"Tesla Model S",
+  manufacturer:"Tesla",
+  batteryType:"Lithium-ion",
+  batteryCapacity:"100 kWh",
+  owner:"Michael Brown",
+  manufactureDate:"05 Jan 2023",
+  installationDate:"15 Jan 2023",
+  batteryHealth:98,
+  healthScore:100,
+  aiGrade:"A+",
+  remainingLife:"9 Years",
+  estimatedRange:"650 km",
+  chargeCycles:290,
+  fastCharging:"10%",
+  slowCharging:"90%",
+  temperature:"28°C",
+  voltage:"410 V",
+  current:"160 A",
+  soh:"98%",
+  soc:"87%",
+  degradation:"2%",
+  lastService:"20 Jun 2026",
+  nextService:"20 Dec 2026",
+  warrantyStatus:"Active",
+  warrantyExpiry:"15 Jan 2031",
+  chargingEfficiency:"98%",
+  energyEfficiency:"7.8 km/kWh",
+  lastScan:"06 Jul 2026",
+  batteryStatus:"Excellent",
+  recommendations:[
+    "Battery operating at peak performance.",
+    "No maintenance required.",
+    "Continue balanced charging."
+  ]
+},
+{
+  batteryId:"RV-BE6-2026-002730",
+  qrCode:"QR-BE6-002730",
+  vehicle:"Mahindra BE 6",
+  manufacturer:"Mahindra",
+  batteryType:"Lithium-ion",
+  batteryCapacity:"79 kWh",
+  owner:"Riya Singh",
+  manufactureDate:"14 Jan 2025",
+  installationDate:"22 Jan 2025",
+  batteryHealth:86,
+  healthScore:91,
+  aiGrade:"A",
+  remainingLife:"6.5 Years",
+  estimatedRange:"550 km",
+  chargeCycles:480,
+  fastCharging:"25%",
+  slowCharging:"75%",
+  temperature:"32°C",
+  voltage:"398 V",
+  current:"146 A",
+  soh:"86%",
+  soc:"72%",
+  degradation:"14%",
+  lastService:"15 Jun 2026",
+  nextService:"15 Dec 2026",
+  warrantyStatus:"Active",
+  warrantyExpiry:"22 Jan 2033",
+  chargingEfficiency:"92%",
+  energyEfficiency:"7.0 km/kWh",
+  lastScan:"06 Jul 2026",
+  batteryStatus:"Good",
+  recommendations:[
+    "Battery health remains good.",
+    "Reduce frequent DC fast charging.",
+    "Inspect cooling system annually."
+  ]
+},
+{
+  batteryId:"RV-FLEET-2026-009999",
+  qrCode:"QR-FLEET-009999",
+  vehicle:"Fleet Taxi EV",
+  manufacturer:"Generic Fleet",
+  batteryType:"Lithium-ion",
+  batteryCapacity:"50 kWh",
+  owner:"Metro Fleet Services",
+  manufactureDate:"12 Mar 2020",
+  installationDate:"20 Mar 2020",
+  batteryHealth:58,
+  healthScore:61,
+  aiGrade:"D",
+  remainingLife:"1.4 Years",
+  estimatedRange:"175 km",
+  chargeCycles:2430,
+  fastCharging:"74%",
+  slowCharging:"26%",
+  temperature:"43°C",
+  voltage:"331 V",
+  current:"118 A",
+  soh:"58%",
+  soc:"42%",
+  degradation:"42%",
+  lastService:"02 Jun 2026",
+  nextService:"Immediate",
+  warrantyStatus:"Expired",
+  warrantyExpiry:"20 Mar 2028",
+  chargingEfficiency:"71%",
+  energyEfficiency:"4.8 km/kWh",
+  lastScan:"06 Jul 2026",
+  batteryStatus:"Critical",
+  recommendations:[
+    "Battery replacement recommended.",
+    "Thermal inspection required.",
+    "Avoid long-distance operation.",
+    "Service immediately."
+  ]
+},
+{
+batteryId:"RV-NEXON-2026-004522",
+qrCode:"QR-NEXON-004522",
+vehicle:"Tata Nexon EV",
+manufacturer:"Tata Motors",
+batteryType:"Lithium-ion",
+batteryCapacity:"40.5 kWh",
+owner:"Rahul Sharma",
+manufactureDate:"20 Aug 2023",
+installationDate:"30 Aug 2023",
+batteryHealth:84,
+healthScore:90,
+aiGrade:"A",
+remainingLife:"5.1 Years",
+estimatedRange:"305 km",
+chargeCycles:812,
+fastCharging:"27%",
+slowCharging:"73%",
+temperature:"35°C",
+voltage:"352 V",
+current:"122 A",
+soh:"84%",
+soc:"67%",
+degradation:"16%",
+lastService:"01 Jul 2026",
+nextService:"01 Jan 2027",
+warrantyStatus:"Active",
+warrantyExpiry:"30 Aug 2031",
+chargingEfficiency:"90%",
+energyEfficiency:"7.2 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Good",
+recommendations:[
+"Battery health is good.",
+"Reduce fast charging.",
+"Cooling system inspection recommended."
+]
+},
+
+{
+batteryId:"RV-MGZS-2026-008221",
+qrCode:"QR-MGZS-008221",
+vehicle:"MG ZS EV",
+manufacturer:"MG",
+batteryType:"Lithium-ion",
+batteryCapacity:"50.3 kWh",
+owner:"Priya Mehta",
+manufactureDate:"11 Apr 2022",
+installationDate:"20 Apr 2022",
+batteryHealth:72,
+healthScore:81,
+aiGrade:"B+",
+remainingLife:"3.4 Years",
+estimatedRange:"248 km",
+chargeCycles:1180,
+fastCharging:"41%",
+slowCharging:"59%",
+temperature:"38°C",
+voltage:"344 V",
+current:"119 A",
+soh:"72%",
+soc:"54%",
+degradation:"28%",
+lastService:"15 Jun 2026",
+nextService:"15 Oct 2026",
+warrantyStatus:"Expiring Soon",
+warrantyExpiry:"20 Apr 2030",
+chargingEfficiency:"85%",
+energyEfficiency:"6.1 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Moderate",
+recommendations:[
+"Battery balancing required.",
+"Avoid charging above 95%.",
+"Service within one month."
+]
+},
+
+{
+batteryId:"RV-MG4-2026-003112",
+qrCode:"QR-MG4-003112",
+vehicle:"MG4 EV",
+manufacturer:"MG",
+batteryType:"Lithium-ion",
+batteryCapacity:"64 kWh",
+owner:"Ananya Kapoor",
+manufactureDate:"18 Feb 2024",
+installationDate:"25 Feb 2024",
+batteryHealth:96,
+healthScore:99,
+aiGrade:"A+",
+remainingLife:"8.1 Years",
+estimatedRange:"515 km",
+chargeCycles:382,
+fastCharging:"12%",
+slowCharging:"88%",
+temperature:"29°C",
+voltage:"404 V",
+current:"142 A",
+soh:"96%",
+soc:"81%",
+degradation:"4%",
+lastService:"20 Jun 2026",
+nextService:"20 Dec 2026",
+warrantyStatus:"Active",
+warrantyExpiry:"25 Feb 2032",
+chargingEfficiency:"97%",
+energyEfficiency:"7.1 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Excellent",
+recommendations:[
+"Battery is in excellent condition.",
+"Continue current charging pattern.",
+"No maintenance required."
+]
+},
+
+{
+batteryId:"RV-BYD-2026-005821",
+qrCode:"QR-BYD-005821",
+vehicle:"BYD Atto 3",
+manufacturer:"BYD",
+batteryType:"Blade Battery",
+batteryCapacity:"60.5 kWh",
+owner:"Sahil Verma",
+manufactureDate:"09 Sep 2023",
+installationDate:"15 Sep 2023",
+batteryHealth:88,
+healthScore:93,
+aiGrade:"A",
+remainingLife:"5.9 Years",
+estimatedRange:"420 km",
+chargeCycles:714,
+fastCharging:"24%",
+slowCharging:"76%",
+temperature:"34°C",
+voltage:"387 V",
+current:"135 A",
+soh:"88%",
+soc:"69%",
+degradation:"12%",
+lastService:"28 Jun 2026",
+nextService:"28 Dec 2026",
+warrantyStatus:"Active",
+warrantyExpiry:"15 Sep 2031",
+chargingEfficiency:"91%",
+energyEfficiency:"6.8 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Good",
+recommendations:[
+"Battery health is healthy.",
+"Reduce DC fast charging.",
+"Routine maintenance recommended."
+]
+},
+
+{
+batteryId:"RV-XUV400-2026-007452",
+qrCode:"QR-XUV400-007452",
+vehicle:"Mahindra XUV400",
+manufacturer:"Mahindra",
+batteryType:"Lithium-ion",
+batteryCapacity:"39.4 kWh",
+owner:"Rohan Iyer",
+manufactureDate:"02 Jan 2023",
+installationDate:"09 Jan 2023",
+batteryHealth:79,
+healthScore:85,
+aiGrade:"B+",
+remainingLife:"4.2 Years",
+estimatedRange:"287 km",
+chargeCycles:1046,
+fastCharging:"38%",
+slowCharging:"62%",
+temperature:"36°C",
+voltage:"341 V",
+current:"118 A",
+soh:"79%",
+soc:"58%",
+degradation:"21%",
+lastService:"11 May 2026",
+nextService:"11 Nov 2026",
+warrantyStatus:"Active",
+warrantyExpiry:"09 Jan 2030",
+chargingEfficiency:"87%",
+energyEfficiency:"6.3 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Fair",
+recommendations:[
+"Battery balancing recommended.",
+"Limit charging above 90%.",
+"Diagnostic within 2 months."
+]
+},
+
+{
+batteryId:"RV-IQ5-2026-009321",
+qrCode:"QR-IQ5-009321",
+vehicle:"Hyundai Ioniq 5",
+manufacturer:"Hyundai",
+batteryType:"Lithium-ion",
+batteryCapacity:"72.6 kWh",
+owner:"Neha Gupta",
+manufactureDate:"27 Nov 2023",
+installationDate:"05 Dec 2023",
+batteryHealth:94,
+healthScore:97,
+aiGrade:"A+",
+remainingLife:"7.4 Years",
+estimatedRange:"560 km",
+chargeCycles:491,
+fastCharging:"15%",
+slowCharging:"85%",
+temperature:"30°C",
+voltage:"405 V",
+current:"149 A",
+soh:"94%",
+soc:"75%",
+degradation:"6%",
+lastService:"19 Jun 2026",
+nextService:"19 Dec 2026",
+warrantyStatus:"Active",
+warrantyExpiry:"05 Dec 2032",
+chargingEfficiency:"96%",
+energyEfficiency:"7.4 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Excellent",
+recommendations:[
+"Excellent battery condition.",
+"Continue present charging habits.",
+"Inspection after 6 months."
+]
+},
+
+{
+batteryId:"RV-EC3-2026-002118",
+qrCode:"QR-EC3-002118",
+vehicle:"Citroen eC3",
+manufacturer:"Citroen",
+batteryType:"Lithium-ion",
+batteryCapacity:"29.2 kWh",
+owner:"Akash Singh",
+manufactureDate:"10 Mar 2024",
+installationDate:"18 Mar 2024",
+batteryHealth:89,
+healthScore:92,
+aiGrade:"A",
+remainingLife:"6.2 Years",
+estimatedRange:"302 km",
+chargeCycles:515,
+fastCharging:"20%",
+slowCharging:"80%",
+temperature:"31°C",
+voltage:"320 V",
+current:"110 A",
+soh:"89%",
+soc:"76%",
+degradation:"11%",
+lastService:"05 Jun 2026",
+nextService:"05 Dec 2026",
+warrantyStatus:"Active",
+warrantyExpiry:"18 Mar 2032",
+chargingEfficiency:"92%",
+energyEfficiency:"8.2 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Very Good",
+recommendations:[
+"Battery performing well.",
+"Normal usage recommended."
+]
+},
+
+{
+batteryId:"RV-KONA-2026-006742",
+qrCode:"QR-KONA-006742",
+vehicle:"Hyundai Kona Electric",
+manufacturer:"Hyundai",
+batteryType:"Lithium-ion",
+batteryCapacity:"64 kWh",
+owner:"Sneha Rao",
+manufactureDate:"16 Jul 2022",
+installationDate:"22 Jul 2022",
+batteryHealth:76,
+healthScore:82,
+aiGrade:"B",
+remainingLife:"3.9 Years",
+estimatedRange:"332 km",
+chargeCycles:1284,
+fastCharging:"45%",
+slowCharging:"55%",
+temperature:"37°C",
+voltage:"390 V",
+current:"136 A",
+soh:"76%",
+soc:"63%",
+degradation:"24%",
+lastService:"18 May 2026",
+nextService:"18 Sep 2026",
+warrantyStatus:"Active",
+warrantyExpiry:"22 Jul 2030",
+chargingEfficiency:"84%",
+energyEfficiency:"6.2 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Needs Attention",
+recommendations:[
+"Battery degradation increasing.",
+"Reduce fast charging.",
+"Perform balancing calibration."
+]
+},
+
+{
+batteryId:"RV-WINDSOR-2026-001987",
+qrCode:"QR-WINDSOR-001987",
+vehicle:"MG Windsor EV",
+manufacturer:"MG",
+batteryType:"LFP",
+batteryCapacity:"50.6 kWh",
+owner:"Karan Malhotra",
+manufactureDate:"05 Feb 2025",
+installationDate:"10 Feb 2025",
+batteryHealth:99,
+healthScore:100,
+aiGrade:"A+",
+remainingLife:"9.4 Years",
+estimatedRange:"470 km",
+chargeCycles:102,
+fastCharging:"6%",
+slowCharging:"94%",
+temperature:"27°C",
+voltage:"401 V",
+current:"138 A",
+soh:"99%",
+soc:"83%",
+degradation:"1%",
+lastService:"Not Required",
+nextService:"10 Feb 2027",
+warrantyStatus:"Active",
+warrantyExpiry:"10 Feb 2033",
+chargingEfficiency:"98%",
+energyEfficiency:"7.8 km/kWh",
+lastScan:"06 Jul 2026",
+batteryStatus:"Excellent",
+recommendations:[
+"Battery is almost new.",
+"Continue existing charging habits.",
+"No maintenance required."
+]
+}
+
+];
