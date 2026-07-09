@@ -25,9 +25,15 @@ export default function Navbar() {
         <nav className="hidden gap-8 text-white/80 md:flex">
           <Link href="/">Home</Link>
           <Link href="/scan">Scan</Link>
+          <Link
+  href="/marketplace"
+  className="hover:text-cyan-400 transition"
+>
+  Marketplace
+</Link>
           <Link href="/">AI Insights</Link>
           <Link href="/">Passport</Link>
-          <Link href="/">Business</Link>
+          
         </nav>
 
         {/* Button */}
